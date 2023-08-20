@@ -1,0 +1,215 @@
+<?php
+include 'connectdb.php';
+session_start();
+if(isset($_SESSION['name']) && isset($_SESSION['username'])){
+?>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="image/x-icon" href="image/logo1.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;376;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--the following link is for carousel slides-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style type="text/css">
+        #id {
+            background-color: rgb(56, 56, 56);
+            padding: 20px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Times New Roman', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: rgb(56, 56, 56);
+        }
+
+        #form {
+            width: 70%;
+            height: 150px;
+        }
+
+        span form {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+        #btn1 {
+            background: white;
+            border: none;
+            border-radius: 5px;
+            width: 30%;
+            height: 30px;
+        }
+
+        form input {
+            background-color: transparent;
+            border-radius: 20px;
+            border: none;
+            border: 2px solid rgb(36 123 189);
+            font-size: 13px;
+            width: 70%;
+            height: 25px;
+            color: rgb(36 123 189);
+        }
+
+        p {
+            padding: 40px;
+            margin-right: 20px;
+            heigh: auto;
+
+        }
+    </style>
+    <script>
+        function bigImg(x) {
+            x.style.height = "400px";
+            x.style.width = "400px";
+        }
+
+        function normalImg(x) {
+            x.style.height = "200px";
+            x.style.width = "200px";
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div id="id">
+            <span style="text-align: right; color:white;padding-top: 10px;" id="form">
+
+                <h1> welcome
+                    <?php echo $_SESSION['name']?>
+                </h1>
+            </span>
+
+            <table>
+                <tr>
+                    <td width="1200"><a href="#"><img src="image/logo1.jpg" id="logo" width="200" height="200"></a>
+                    </td>
+                    <td width="360"><span id="form">
+
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="list">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="user.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Products
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" style="color: white;" href="vanity_user.html">Vanity &
+                                            Table</a></li>
+                                    <li><a class="dropdown-item" style="color: white;" href="desks_user.html">Desk</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact us.html">Contact Us</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <p>
+        <img class="margin" src="desks/desk 1 drawer 1 locker/desk1dl1.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 1 drawer 1 locker/desk1dl2.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 1 drawer 1 locker/desk1dl3.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 1 drawer 1 locker/desk1dl4.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 1 drawer 1 locker/555.jpg" width="300" height="300"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+    </p>
+    <p>
+        <img class="margin" src="desks/new desk/newdesk1.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/new desk/newdesk2.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/new desk/newdesk3.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/new desk/newdesk4.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/new desk/666.jpg" width="300" height="300" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+    </p>
+    <p>
+        <img class="margin" src="desks/desk mashtoub/deskshateb1.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk mashtoub/deskshateb2.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk mashtoub/deskshateb3.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk mashtoub/deskshateb4.jpeg" width="230" height="350"
+            onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk mashtoub/777.jpg" width="300" height="300" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+    </p>
+    <p>
+        <img class="margin" src="desks/desk 2 drawers/desk2d1.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 2 drawers/desk2d2.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 2 drawers/desk2d3.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 2 drawers/desk2d4.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/desk 2 drawers/888.jpg" width="300" height="300" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+    </p>
+    <p>
+        <img class="margin" src="desks/study desk/studydesk1.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/study desk/studydesk2.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/study desk/studydesk3.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/study desk/studydesk4.jpeg" width="230" height="350" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+        <img class="margin" src="desks/study desk/999.jpg" width="300" height="300" onmouseover="bigImg(this)"
+            onmouseout="normalImg(this)">
+    </p>
+
+
+
+</body>
+
+</html>
